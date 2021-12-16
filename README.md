@@ -2,10 +2,12 @@
 <h6 align="center">By: <a href="https://nikichatv.com/Website/N-Studios.html">N-Studios</a></h6>
 
 <br>
-<p align="">A <stron>free-to-use</strong> open source project. Built using the <string>A* pathfinding algorithm</string>, it is incredibly easy to set up a grid-based pathfinding in a Unity 2D workspace. You can have a look at or build on top of the scripts inside /Scripts folder. A setup tutorial is listed bellow and the whole Examplecs.cs is described with comments on almost each line. Feel free to use in <strong>any kind of projects</strong>. Credit is not required but is very appreciated.</p>
+<p align="">A <strong>free-to-use</strong> open source project. Built using the <strong>A* pathfinding algorithm</strong>, on C#, it makes is incredibly easy to set up a grid-based pathfinding in a Unity 2D workspace. You can have a look at or build on top of the scripts inside the /Scripts folder. A setup tutorial is listed bellow and the whole Examplecs.cs is described with comments on almost each line. Feel free to use in <strong>any kind of projects</strong>. Credit is not required but is very appreciated.</p>
 
 <br>
-<h3>Setup:</h3>
+## ⚙️ Setup
+<br>
+
 <p>At the very top of your code make sure to reference the AStar namespace by doing:</p>
 
 ````
@@ -24,7 +26,6 @@ public Vector2Int size; // Size of the grid - X means width and Y means height
 
 <br>
 <p>Those are the values that can be changed from the user. However, we still need a few more, three to be precise. They are going to be the ones that are not accessible from out of the script and will store tha pathfinder info:</p>
-<br>
 
 ````
 Vector2Int originPosition; // This represents the bottom-left corner node of our grid
@@ -34,7 +35,6 @@ List<Vector3> path = new List<Vector3>(); // This empty Vector3 list is goint to
 
 <br>
 <p>Now, time to generate the nodes:</p>
-<br>
 
 ````
 public void Generate()
@@ -57,7 +57,6 @@ public void Generate()
 
 <br>
 <p>For now, we only have walkable points. What about the "obstacles"? Well, this code randomly generates unwalkable nodes (using the nodeUnwalkablePercentage):</p>
-<br>
 
 ````
 public void Generate()
@@ -91,14 +90,12 @@ public void Generate()
 
 <br>
 <p>Finally, create the grid:</p>
-<br>
 
 ````
 grid = new AStarGrid(new Vector2Int(-size.x / 2, -size.y / 2), size, nodes);
 ````
 <br>
 <p>Now that we have the full grid, it is time to actually find the shortest path, if there is one, right? Here's how you do it:</p>
-<br>
 
 ````
 public void FindPath()
@@ -113,7 +110,6 @@ public void FindPath()
 
 <br>
 <p>Congratulations, you've now got a pathfinding code! <br> Just one last thing - we all love data, don't we? Why not visualize all of this? No worries, we got it covered:</p>
-<br>
 
 ````
 // This method is just to visualize the nodes
@@ -176,3 +172,9 @@ private void OnDrawGizmosSelected()
 
 <br>
 <p>So that's it, just keep in mind that the visualization part only works in "Editor" mode and NOT "Play" mode. You can still create a code that does that in "Play" mode - the proccess should be very similar.</p>
+
+## 🤝 Support
+Contributions, issues, and feature requests are welcome!
+
+Give a ⭐️ if you like this project!
+You can also check us out on the <a href="https://assetstore.unity.com/publishers/51773">Unity Asset Store</a>
