@@ -1,2 +1,1 @@
-# GridPathfinding2D
-A simple grid pathdinding project, designed for but not limited to Unity.
+<h1 align="center">Project title</h1>
