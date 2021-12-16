@@ -6,7 +6,7 @@
 
 <br>
 
-## ⚙️ Setup
+##  ⚙️  Setup
 
 <p>At the very top of your code make sure to reference the AStar namespace by doing:</p>
 
@@ -173,8 +173,9 @@ private void OnDrawGizmosSelected()
 <br>
 <p>So that's it, just keep in mind that the visualization part only works in "Editor" mode and NOT "Play" mode. You can still create a code that does that in "Play" mode - the proccess should be very similar.</p>
 
-## 🤝 Support
+##  🤝  Support
 Contributions, issues, and feature requests are welcome!
 
-Give a ⭐️ if you like this project!
-You can also check us out on the <a href="https://assetstore.unity.com/publishers/51773">Unity Asset Store</a>
+Give a  ⭐️  if you like this project!
+<br>
+You can also check us out on the <a href="https://assetstore.unity.com/publishers/51773">Unity Asset Store</a>.
