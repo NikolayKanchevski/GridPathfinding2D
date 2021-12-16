@@ -2,7 +2,7 @@
 <h6 align="center">By: <a href="https://nikichatv.com/Website/N-Studios.html">N-Studios</a></h6>
 
 <br>
-<p align="">A <strong>free-to-use</strong> open source project. Built using the <strong>A* pathfinding algorithm</strong>, on C#, it makes is incredibly easy to set up a grid-based pathfinding in a Unity 2D workspace. You can have a look at or build on top of the scripts inside the /Scripts folder. A setup tutorial is listed bellow and the whole Examplecs.cs is described with comments on almost each line. Feel free to use in <strong>any kind of projects</strong>. Credit is not required but is very appreciated.</p>
+<p align="">A <strong>free-to-use</strong> open source project. Built using the <strong>A* pathfinding algorithm</strong>, on C#, it makes it incredibly easy to set up grid-based pathfinding in a Unity 2D workspace. You can have a look at or build on top of the scripts inside the /Scripts folder. A setup tutorial is listed below and the whole Examples.cs is described with comments on almost every line. Feel free to use in <strong>any kind of projects</strong>. Credit is not required but is very appreciated.</p>
 
 <br>
 
@@ -15,7 +15,7 @@ using Ultimate.Algorithms.AStar;
 ````
 
 <br>
-<p>Add some variables to make the tweaking of the behaviour of the pathfinding easy. Here's an example:</p>
+<p>Add some variables to make the tweaking of the behavior of the pathfinding easy. Here's an example:</p>
 
 ````
 public int startNodeIndex = 0; // The index of the start node in the grid.nodes list
@@ -25,7 +25,7 @@ public Vector2Int size; // Size of the grid - X means width and Y means height
 ````
 
 <br>
-<p>Those are the values that can be changed from the user. However, we still need a few more, three to be precise. They are going to be the ones that are not accessible from out of the script and will store tha pathfinder info:</p>
+<p>Those are the values that can be changed from the user. However, we still need a few more, three to be precise. They are going to be the ones that are not accessible from out of the script and will store the pathfinder info:</p>
 
 ````
 Vector2Int originPosition; // This represents the bottom-left corner node of our grid
@@ -95,7 +95,7 @@ public void Generate()
 grid = new AStarGrid(new Vector2Int(-size.x / 2, -size.y / 2), size, nodes);
 ````
 <br>
-<p>Now that we have the full grid, it is time to actually find the shortest path, if there is one, right? Here's how you do it:</p>
+<p>Now that we have the full grid, it is time to find the shortest path, if there is one, right? Here's how you do it:</p>
 
 ````
 public void FindPath()
@@ -171,7 +171,7 @@ private void OnDrawGizmosSelected()
 ````
 
 <br>
-<p>So that's it, just keep in mind that the visualization part only works in "Editor" mode and NOT "Play" mode. You can still create a code that does that in "Play" mode - the proccess should be very similar.</p>
+<p>So that's it, just keep in mind that the visualization part only works in "Editor" mode and NOT "Play" mode. You can still create a code that does that in "Play" mode - the process should be very similar.</p>
 
 ##  🤝  Support
 Contributions, issues, and feature requests are welcome!
