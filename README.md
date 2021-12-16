@@ -10,33 +10,33 @@
 
 <p>At the very top of your code make sure to reference the AStar namespace by doing:</p>
 
-````
+```c#
 using Ultimate.Algorithms.AStar;
-````
+```
 
 <br>
 <p>Add some variables to make the tweaking of the behavior of the pathfinding easy. Here's an example:</p>
 
-````
+```c#
 public int startNodeIndex = 0; // The index of the start node in the grid.nodes list
 public int endNodeIndex = 1; // The index of the end node in the grid.nodes list
 public float nodeUnwalkablePercentange = 20f;     // Chance of a node being unwalkable
 public Vector2Int size; // Size of the grid - X means width and Y means height
-````
+```
 
 <br>
 <p>Those are the values that can be changed from the user. However, we still need a few more, three to be precise. They are going to be the ones that are not accessible from out of the script and will store the pathfinder info:</p>
 
-````
+```c#
 Vector2Int originPosition; // This represents the bottom-left corner node of our grid
 AStarGrid grid; // A local grid that is then being passed to the pathfinder
 List<Vector3> path = new List<Vector3>(); // This empty Vector3 list is goint to store the path generated after the pathfinding is done
-````
+```
 
 <br>
 <p>Now, time to generate the nodes:</p>
 
-````
+```c#
 public void Generate()
 {
     path = new List<Vector3>(); // We first define an empty list where we will store the path as a list of Vector3 points
@@ -53,12 +53,12 @@ public void Generate()
         }
     }
 }
-````
+```
 
 <br>
 <p>For now, we only have walkable points. What about the "obstacles"? Well, this code randomly generates unwalkable nodes (using the nodeUnwalkablePercentage):</p>
 
-````
+```c#
 public void Generate()
 {
     path = new List<Vector3>(); // We first define an empty list where we will store the path as a list of Vector3 points
@@ -86,18 +86,18 @@ public void Generate()
         if (unwalkable) node.SetPenalty(0f); // SetPenalty(1f) == walkable and SetPenalty(0f) means unwalkable
     }
 }
-````
+```
 
 <br>
 <p>Finally, create the grid:</p>
 
-````
+```c#
 grid = new AStarGrid(new Vector2Int(-size.x / 2, -size.y / 2), size, nodes);
-````
+```
 <br>
 <p>Now that we have the full grid, it is time to find the shortest path, if there is one, right? Here's how you do it:</p>
 
-````
+```c#
 public void FindPath()
 {
     // Simply instantiate a new AStarPathfinding class...
@@ -106,12 +106,12 @@ public void FindPath()
     //... and call the Pathding() method by specifying your grid start and end node
     path = pathfinding.Pathfind(grid, startNodeIndex, endNodeIndex);
 }
-````
+```
 
 <br>
 <p>Congratulations, you've now got a pathfinding code! <br> Just one last thing - we all love data, don't we? Why not visualize all of this? No worries, we got it covered:</p>
 
-````
+```c#
 // This method is just to visualize the nodes
 private void OnDrawGizmosSelected()
 {
@@ -168,7 +168,7 @@ private void OnDrawGizmosSelected()
     }
 
 }
-````
+```
 
 <br>
 <p>So that's it, just keep in mind that the visualization part only works in "Editor" mode and NOT "Play" mode. You can still create a code that does that in "Play" mode - the process should be very similar.</p>
