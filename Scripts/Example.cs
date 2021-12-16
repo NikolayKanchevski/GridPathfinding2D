@@ -7,7 +7,7 @@ using UnityEngine;
 public class Example : MonoBehaviour {
 
     public int startNodeIndex = 0; // The index of the start node in the grid.nodes list
-    public int endNodeIndex = 1; // The index of the end node in the grid.nodes list;
+    public int endNodeIndex = 1; // The index of the end node in the grid.nodes list
     public float nodeUnwalkablePercentange = 20f; // Chance of a node being unwalkable
 
     [Space]
@@ -30,7 +30,7 @@ public class Example : MonoBehaviour {
             for (int x = originPosition.x; x < originPosition.x + size.x; x++)
             {
                 // For each point in the grid we create a new node with the X and Y coordinates
-                nodes.Add(new Node(1f, x, y));
+                nodes.Add(new Node(1f, x, y)); // 1f means that it is walkable and 0f - that is is not walkable
             }
         }
 
