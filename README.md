@@ -7,11 +7,14 @@
 <br>
 <h3>Setup:</h3>
 <p>At the very top of your code make sure to reference the AStar namespace by doing:</p>
+
 ````
 using Ultimate.Algorithms.AStar;
 ````
+
 <br>
 <p>Add some variables to make the tweaking of the behaviour of the pathfinding easy. Here's an example:</p>
+
 ````
 public int startNodeIndex = 0;     // The index of the start node in the grid.nodes list
 public int endNodeIndex = 1;     // The index of the end node in the grid.nodes list
@@ -19,10 +22,13 @@ public float nodeUnwalkablePercentange = 20f;     // Chance of a node being unwa
 [Space]
 public Vector2Int size;     // Size of the grid - X means width and Y means height
 ````
+
 <br>
 <p>Those are the values that can be changed from the user. However, we still need a few more, three to be precise. These are going to be the ones that are not accessible from out of the script and will store tha pathfinder info:</p>
+
 ````
 Vector2Int originPosition;     // This represents the bottom-left corner node of our grid
 List<Vector3> path = new List<Vector3>();     // This empty Vector3 list is goint to store the path generated after the pathfinding is done
 AStarGrid grid;     // A local grid that is then being passed to the pathfinder
 ````
+
